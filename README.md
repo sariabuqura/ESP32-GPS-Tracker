@@ -2,6 +2,9 @@
 
 A simple GPS information display built with an **ESP32**, a **u-blox NEO-M8N GPS module** and a **1.3" SH1106 OLED (128x64)**. It shows the fix status, number of satellites, coordinates, speed, altitude, live GPS time and the time of the last successful synchronization.
 
+![Final result on the breadboard](ESP32-GPS-Tracker.jpg)
+
+
 ---
 
 ## Features
@@ -136,29 +139,6 @@ SYNC:15:28:11
 | `SAT` shows but no `FIX` | Not enough satellites yet | Wait for at least 4 satellites |
 | Garbage on serial | Wrong baud rate | Use 115200 for the Serial Monitor |
 | No data from GPS | TX/RX not crossed | Swap the GPS TX/RX wires |
-
----
-
-## Ideas for Improvement
-
-- Add local time zone offset
-- Log coordinates to an SD card
-- Show heading and a compass arrow
-- Display multiple pages with a button
-- Send position over Wi-Fi/MQTT or show it on a map
-
----
-
-## Project Structure
-
-```
-esp32-gps-oled/
-├── esp32_gps_oled.ino
-├── images/
-│   ├── breadboard.jpg
-│   └── display.jpg
-└── README.md
-```
 
 ---
 
